@@ -8,8 +8,10 @@ from telegram.ext import filters, ApplicationBuilder
 import os
 from dotenv import load_dotenv
 
+print('Setting env...')
 load_dotenv()
 
+print('Loading env...')
 API_TOKEN = os.getenv('BOT_TOKEN')
 database_url = os.environ.get('DATABASE_URL')
 print(API_TOKEN, database_url)
