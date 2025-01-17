@@ -5,8 +5,12 @@ tracemalloc.start()
 from telegram.constants import ChatMemberStatus
 from telegram.ext import *
 from telegram.ext import filters, ApplicationBuilder
+import os
+from dotenv import load_dotenv
 
-API_TOKEN = '8154517633:AAFKou25tAAl-0FlUKe4tw-K-MFhw4zFciA'
+load_dotenv()
+
+API_TOKEN = os.getenv('BOT_TOKEN')
 print('Starting a bot...')
 
 async def start_commmand(update, context):
