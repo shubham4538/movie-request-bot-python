@@ -10,7 +10,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_TOKEN = os.getenv('BOT_TOKEN')
+# API_TOKEN = os.getenv('BOT_TOKEN')
+API_TOKEN = '8154517633:AAFKou25tAAl-0FlUKe4tw-K-MFhw4zFciA'
 print('Starting a bot...')
 
 async def start_commmand(update, context):
