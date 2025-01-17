@@ -10,7 +10,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# API_TOKEN = os.getenv('BOT_TOKEN')
+API_TOKEN = os.getenv('BOT_TOKEN')
+database_url = os.environ.get('DATABASE_URL')
+print(API_TOKEN, database_url)
+
 API_TOKEN = '8154517633:AAFKou25tAAl-0FlUKe4tw-K-MFhw4zFciA'
 print('Starting a bot...')
 
