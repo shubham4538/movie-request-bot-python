@@ -53,8 +53,16 @@ def main():
   app.add_handler(ChatMemberHandler(welcome_command, ChatMemberHandler.CHAT_MEMBER))
   app.add_handler(MessageHandler(filters.Text and ~filters.COMMAND, custom_commmand))
 
+  PORT = int(os.environ.get("PORT", 5000))
+  WEBHOOK_URL = f"https://your-app-name.onrender.com/{API_TOKEN}"
+  
   # Run bot
-  app.run_polling()
+  app.run_webhook(
+    listen="0.0.0.0",
+    port=PORT,
+    url_path=API_TOKEN,
+    webhook_url=WEBHOOK_URL,
+  )
 
 if __name__ == "__main__":
   main()
